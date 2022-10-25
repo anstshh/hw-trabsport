@@ -18,7 +18,7 @@ public class Car extends Transport {
         }
     }
 
-    public Car(String brand, String model, int productionYear, String productionCountry, String color, int maxSpeed, float engineVolume) {
+    public Car (String brand, String model, int productionYear, String productionCountry, String color, int maxSpeed, float engineVolume) {
         super(brand, model, productionYear, productionCountry, color, maxSpeed);
         this.engineVolume = engineVolume;
     }
