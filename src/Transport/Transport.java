@@ -1,10 +1,10 @@
 package Transport;
 
     public abstract class Transport {
-        final private String brand;
-        final private String model;
-        final private int productionYear;
-        final private String productionCountry;
+        private String brand;
+        private String model;
+        private int productionYear;
+        private String productionCountry;
         private String color;
         private int maxSpeed;
 
@@ -38,7 +38,7 @@ package Transport;
                     '}';
         }
 
-        public Transport(String brand, String model, int productionYear, String productionCountry, String color, int maxSpeed) {
+        public Transport(String brand, String model, int productionYear, String productionCountry, String color, int maxSpeed, String fuel) {
             this.brand = brand;
             this.model = model;
             this.productionYear = productionYear;
@@ -47,7 +47,7 @@ package Transport;
             this.maxSpeed = maxSpeed;
 
 
-            public String getBrand () {
+            public String getBrand() {
                 return brand;
             }
 
@@ -73,5 +73,7 @@ package Transport;
             }
 
         }
+
+        public abstract void refill();
     }
 

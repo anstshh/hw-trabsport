@@ -19,7 +19,7 @@ public class Car extends Transport {
     }
 
     public Car (String brand, String model, int productionYear, String productionCountry, String color, int maxSpeed, float engineVolume) {
-        super(brand, model, productionYear, productionCountry, color, maxSpeed);
+        super(brand, model, productionYear, productionCountry, color, maxSpeed, "Топливо");
         this.engineVolume = engineVolume;
     }
 
@@ -28,5 +28,10 @@ public class Car extends Transport {
         return "Car{" +
                 "engineVolume=" + engineVolume +
                 '}';
+    }
+
+    @Override
+    public void refill() {
+
     }
 }
