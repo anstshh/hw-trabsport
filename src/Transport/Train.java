@@ -1,6 +1,6 @@
 package Transport;
 
-public abstract class Train extends Transport {
+public class Train extends Transport {
 
     private int priceOfTrip;
     private int timeOfTrip;
@@ -8,7 +8,7 @@ public abstract class Train extends Transport {
     private String finalStop;
     private int numberOfWagons;
 
-    public Train(String brand, String model, int productionYear, String productionCountry, String color, int maxSpeed, int priceOfTrip, int timeOfTrip, String stationName, String finalStop, int numberOfWagons) {
+    public Train(String brand, String model, int productionYear, String productionCountry, int maxSpeed, int priceOfTrip, int timeOfTrip, String stationName, String finalStop, int numberOfWagons) {
         super(brand, model, productionYear, productionCountry, null, 0,"Топливо");
         setMaxSpeed(maxSpeed);
         if (priceOfTrip == 0) {
@@ -72,6 +72,11 @@ public abstract class Train extends Transport {
 
     @Override
     public void refill() {
+
+    }
+
+    @Override
+    protected void refill(Boolean gasoline, Boolean diesel, Boolean electricity) {
 
     }
 }
